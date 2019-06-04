@@ -9,6 +9,11 @@ public class SceneLoader : MonoBehaviour
         {
         SceneManager.LoadScene("MainScene");
          }
+
+    public void BadEnd()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
 }
 
 
