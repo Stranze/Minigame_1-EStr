@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Meter : MonoBehaviour { 
 
-public float startTimeInSec = 30;
+public class MeterCountdown : MonoBehaviour { 
+
+public float startTimeInSec = 100;
     public SceneLoader sceneLoader;
 
     private TextMeshProUGUI timeInSec;
@@ -23,7 +24,7 @@ public float startTimeInSec = 30;
 
         if (time <= 0)
         {
-            sceneLoader.LoadGameOverScene();
+            sceneLoader.BadEnd();
         }
     }
 }
