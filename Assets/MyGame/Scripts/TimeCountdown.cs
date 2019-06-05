@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MeterCountdown : MonoBehaviour { 
+public class TimeCountdown : MonoBehaviour {
 
-    public float startTimeInSec = 100;
+    public float startTimeInSec = 60;
     public SceneLoader sceneLoader;
 
-    private TextMeshProUGUI timeInSec;
+    private TextMeshProUGUI Timer;
     private float time;
 
     private void Start()
     {
         time = startTimeInSec;
-        timeInSec = gameObject.GetComponent<TextMeshProUGUI>();
+        Timer = gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
     {
-        time -= Time.deltaTime*2;
-        timeInSec.text = time.ToString("00");
+        time -= Time.deltaTime;
+        Timer.text = time.ToString("00");
         Debug.Log("time: " + time);
 
         if (time <= 0)
         {
-            sceneLoader.GoodEnd();
+            sceneLoader.BadEnd();
             Debug.Log("switch");
         }
     }
