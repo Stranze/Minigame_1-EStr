@@ -3,7 +3,7 @@
 public class Wall : MonoBehaviour {
 
     Rigidbody2D rb;
-    float moveSpeed = 2f;
+    float moveSpeed = 2.0f;
 
     private void Start()
     {
