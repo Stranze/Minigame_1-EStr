@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Wall : MonoBehaviour {
 
@@ -10,7 +8,6 @@ public class Wall : MonoBehaviour {
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-       // rb.velocity = new Vector2(gameObject.transform.position.x, UnityEngine.Random.Range(-1, 1));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

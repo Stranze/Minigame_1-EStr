@@ -1,13 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WallSpawner : MonoBehaviour {
 
     public Wall wallPrefab;
     public GameObject wallParent;
-
-   
 
     IEnumerator Start()
     {

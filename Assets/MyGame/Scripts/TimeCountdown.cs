@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class TimeCountdown : MonoBehaviour {
@@ -21,12 +19,10 @@ public class TimeCountdown : MonoBehaviour {
     {
         time -= Time.deltaTime;
         Timer.text = time.ToString("00");
-        Debug.Log("time: " + time);
 
         if (time <= 0)
         {
             sceneLoader.BadEnd();
-            Debug.Log("switch");
         }
     }
 }
