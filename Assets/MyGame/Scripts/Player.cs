@@ -8,12 +8,13 @@ public class Player : MonoBehaviour {
 
     private const string AXIHORIZONTAL = "Horizontal";
     private float moveSpeed = 5.0f;
+    private float maxLeft = -6f;
+    private float maxRight = 6f;
 
     private void Move()
     {
         var deltaX = Input.GetAxis(AXIHORIZONTAL) * Time.deltaTime * moveSpeed;
-        var newPosX = Mathf.Clamp(transform.position.x + deltaX, -300f, 300f);
-
+        var newPosX = Mathf.Clamp(transform.position.x + deltaX, maxLeft, maxRight);
         transform.position = new Vector2(newPosX, transform.position.y);
     }
 
