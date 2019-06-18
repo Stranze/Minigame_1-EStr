@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
-public class MeterCountdown : MonoBehaviour { 
+public class MeterCountdown : MonoBehaviour
+{ 
 
-    public float startTimeInSec = 100;
+    public float startTimeInSec = 100.0f;
     public SceneLoader sceneLoader;
 
     private TextMeshProUGUI timeInSec;
     private float time;
+    private float doubleTime = 2.0f;
 
     private void Start()
     {
@@ -19,14 +19,12 @@ public class MeterCountdown : MonoBehaviour {
 
     void Update()
     {
-        time -= Time.deltaTime*2;
+        time -= Time.deltaTime*doubleTime;
         timeInSec.text = time.ToString("00");
-        Debug.Log("time: " + time);
 
-        if (time <= 00)
+        if (time <= 0.0f)
         {
             sceneLoader.GoodEnd();
-            Debug.Log("switch");
         }
     }
 }
