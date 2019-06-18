@@ -587,6 +587,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4221555050528280, guid: 04aaa3beaf47a4700893966851a3a5d5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04aaa3beaf47a4700893966851a3a5d5, type: 2}
   m_IsPrefabAsset: 0
@@ -832,6 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18753a51db3b54b679502152a8259296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 0}
 --- !u!212 &1810725242
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class MeterCountdown : MonoBehaviour {
         timeInSec.text = time.ToString("00");
         Debug.Log("time: " + time);
 
-        if (time <= 0)
+        if (time <= 00)
         {
             sceneLoader.GoodEnd();
             Debug.Log("switch");
